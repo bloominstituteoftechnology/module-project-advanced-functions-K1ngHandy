@@ -80,8 +80,15 @@
     // ❗ Notes:
     // 🧠 Solve this challenge using the map method of the learners array.
     // 🧠 Use arrow functions.
-    const processLearnerMap = () => {
-
+    const processLearnerMap = (learnerObjArr) => {
+      learnerObjArr.map(learnerObj => {
+        if (learnerObj.lovesJS === 0) {
+          learnerObj.lovesJS = false;
+        } else if (learnerObj.lovesJS === 1) {
+          learnerObj.lovesJS = true
+        }
+      })
+      return learnerObjArr;
     }
 
     // 👉 CHALLENGE 5
