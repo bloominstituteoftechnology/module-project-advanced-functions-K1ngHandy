@@ -47,7 +47,14 @@
     // 🧠 There are many approaches to this problem: using a loop, using forEach, using map...
     // 🧠 Solve this challenge using a for/in loop or a for loop.
     const processLearnersLoop = (objArr) => {
-      
+      for (let i in objArr) {
+        if (objArr[i].lovesJS === 0) {
+          objArr[i].lovesJS = false;
+        } else if (objArr[i].lovesJS === 1) {
+          objArr[i].lovesJS = true;
+        }
+      }
+      return objArr;
     }
 
     // 👉 CHALLENGE 3
