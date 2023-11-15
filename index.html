@@ -99,8 +99,19 @@
     // ❗ Notes:
     // 🧠 Solve this challenge using the forEach method of the learners array.
     // 🧠 You will need to declare a result array into which you push learners from inside your forEach loop.
-    const getJavaScriptLoversForEach = () => {
+    const getJavaScriptLoversForEach = (learnerObjectArr) => {
+      const loversArr = [];
 
+      learnerObjectArr.forEach(learnerObject => {
+        if (learnerObject.lovesJS === 1 || learnerObject.lovesJS === true) {
+          loversArr.push(learnerObject);
+        }
+      })
+      if (loversArr.length < 1) {
+        return "no JS lovers here!";
+      } else {
+        return loversArr;
+      }
     }
 
     // 👉 CHALLENGE 6
