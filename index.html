@@ -143,7 +143,7 @@
     const sumOddInts = (intArr) => {
       let sum = 0;
       let odd = [];
-      
+
       intArr.forEach(int => {
         if (int % 2 === 1) {
           sum += int;
@@ -164,8 +164,21 @@
     // checkInts(2, 6) // should return ["even", "even"]
     // ❗ Notes:
     // 🧠 Solve this problem using rest parameters and map.
-    const checkInts = () => {
+    const checkInts = (...args) => {
+      const evenOrOdd = [];
 
+      if (args.length < 1) {
+        return "pass some arguments, yo!";
+      } else {
+        args.map(num => {
+          if (num % 2 === 0) {
+            evenOrOdd.push('even');
+          } else if (num % 2 === 1) {
+            evenOrOdd.push('odd');
+          }
+        })
+      return evenOrOdd;
+      }
     }
 
     // 🧪 TESTS, do not work below this line
