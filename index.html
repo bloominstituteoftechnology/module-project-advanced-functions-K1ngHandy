@@ -47,14 +47,7 @@
     // 🧠 There are many approaches to this problem: using a loop, using forEach, using map...
     // 🧠 Solve this challenge using a for/in loop or a for loop.
     const processLearnersLoop = (objArr) => {
-      objArr.forEach(learner => {
-        if (learner.lovesJS === 0) {
-        learner.lovesJS = false;
-        } else if (learner.lovesJS === 1) {
-          learner.lovesJS = true;
-        }
-      });
-      return objArr;
+      
     }
 
     // 👉 CHALLENGE 3
@@ -63,8 +56,15 @@
     // ❗ Notes:
     // 🧠 Solve this challenge using the forEach method of the learners array.
     // 🧠 Use arrow functions whenever possible.
-    const processLearnerForEach = () => {
-
+    const processLearnerForEach = (learnerArr) => {
+      learnerArr.forEach(learner => {
+        if (learner.lovesJS === 0) {
+        learner.lovesJS = false;
+        } else if (learner.lovesJS === 1) {
+          learner.lovesJS = true;
+        }
+      });
+      return learnerArr;
     }
 
     // 👉 CHALLENGE 4
